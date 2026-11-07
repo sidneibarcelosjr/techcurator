@@ -1,0 +1,40 @@
+# Segredos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python / Django
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+*.sqlite3
+staticfiles/
+media/
+
+# Node / Vite
+node_modules/
+frontend/dist/
+.vite/
+
+# Dados locais e backups do banco
+*.sql
+*.dump
+backup_*
+pgdata/
+postgres_data/
+
+# Dados da pesquisa (conteúdo de terceiros)
+gabarito_amostra.csv
+gabarito*.xlsx
+Gabarito*.xlsx
+
+# Sistema / editores
+.DS_Store
+.idea/
+.vscode/
+*.log
+.claude/
