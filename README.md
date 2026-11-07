@@ -84,7 +84,7 @@ docker compose exec backend python manage.py diagnostico_clustering --gabarito g
 docker compose exec backend python manage.py analisar_pp2
 ```
 
-Resultados reportados na monografia (base de 1.477 notícias, 15 fontes, 28/09 a 04/10/2026): limiar 0,50, ARI 0,333, V-measure 0,988; correlação de Spearman ρ = 0,146 (p < 0,001).
+Os resultados completos estão no Capítulo 5 da monografia.
 
 **Sobre os dados:** a base coletada contém conteúdo de portais de terceiros e **não é distribuída** neste repositório. O processo de coleta é reproduzível com `run_scraping`; os resultados variam conforme o período coletado.
 
