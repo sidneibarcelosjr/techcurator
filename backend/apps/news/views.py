@@ -1,7 +1,7 @@
 """Views (API REST) do app news."""
 from datetime import timedelta
 
-from django.db.models import Q
+from django.db.models import Exists, OuterRef, Q
 from django.utils import timezone
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
@@ -118,7 +118,12 @@ class TrendingView(ListAPIView):
 
 
 class SourceListView(ListAPIView):
-    queryset = Source.objects.filter(is_active=True)
+    # Só fontes ativas e com ao menos um artigo coletado (evita chips vazios
+    # no filtro do front para portais desativados ou com feed quebrado).
+    queryset = Source.objects.filter(
+        Exists(Article.objects.filter(source=OuterRef("pk"))),
+        is_active=True,
+    )
     serializer_class = SourceSerializer
     permission_classes = [AllowAny]
     pagination_class = None

@@ -89,7 +89,7 @@ export default function Home({ onNeedAuth }) {
         <p>
           {q
             ? "Notícias que correspondem à sua busca."
-            : "Notícias coletadas de 23 portais, resumidas e classificadas automaticamente."}
+            : "Notícias coletadas de portais brasileiros de tecnologia, resumidas e classificadas automaticamente."}
         </p>
         <div className="accent-rule" />
       </div>
