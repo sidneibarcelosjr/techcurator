@@ -167,7 +167,7 @@ TECH_RELEVANCE_THRESHOLD_SPECIALIZED = float(
 # Clustering de notícias (agrupamento por fato cross-source)
 # ----------------------------------------------------------------------------
 # Limiar de similaridade de cosseno para agrupar notícias como "mesmo fato".
-CLUSTERING_THRESHOLD = float(env("CLUSTERING_THRESHOLD", "0.30"))
+CLUSTERING_THRESHOLD = float(env("CLUSTERING_THRESHOLD", "0.50"))
 # Janela temporal padrão do clustering periódico (horas).
 CLUSTERING_WINDOW_HOURS = int(env("CLUSTERING_WINDOW_HOURS", "72"))
 

@@ -75,7 +75,7 @@ def _build_corpus(articles) -> tuple[list[str], list[int], list[int], list]:
 
 def cluster_articles(
     articles,
-    threshold: float = 0.30,
+    threshold: float = 0.50,
     window_hours: int = 48,
     min_df: int = 2,
 ) -> ClusterResult:

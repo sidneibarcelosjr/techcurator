@@ -134,7 +134,7 @@ def run_clustering_task(
     if window_hours is None:
         window_hours = getattr(settings, "CLUSTERING_WINDOW_HOURS", 72)
     if threshold is None:
-        threshold = getattr(settings, "CLUSTERING_THRESHOLD", 0.30)
+        threshold = getattr(settings, "CLUSTERING_THRESHOLD", 0.50)
 
     from apps.news.models import Article
     since = timezone.now() - timedelta(hours=window_hours)

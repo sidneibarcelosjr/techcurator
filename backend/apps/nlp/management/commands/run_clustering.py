@@ -36,7 +36,7 @@ class Command(BaseCommand):
     def handle(self, *args, **opts):
         from django.conf import settings
 
-        threshold = opts["threshold"] or getattr(settings, "CLUSTERING_THRESHOLD", 0.30)
+        threshold = opts["threshold"] or getattr(settings, "CLUSTERING_THRESHOLD", 0.50)
         window = opts["window"] or getattr(settings, "CLUSTERING_WINDOW_HOURS", 72)
 
         qs = Article.objects.select_related("source").order_by("-scraped_at")
